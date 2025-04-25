@@ -19,12 +19,12 @@ evaluator = create_llm_as_judge(
     feedback_key="custom"
 )
 
-# test-case - 1
+# test case 1
 output = "Thank you for reaching out. We appreciate your patience and are working on resolving your issue promptly."
 eval_result = evaluator(outputs=output)
-print("test-case 1", eval_result)
+print("test case 1", eval_result)
 
-# test-case - 2
+# test case 2
 output = "Stop emailing us again and again. We already told you it’s not our problem."
 eval_result = evaluator(outputs=output)
-print("test-case 2", eval_result)
+print("test case 2", eval_result)

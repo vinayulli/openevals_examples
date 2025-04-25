@@ -8,7 +8,7 @@ evaluator = create_llm_as_judge(
 )
 
 
-# test-case -1 
+# test case 1 
 inputs = {
     "question": "Where was the first president of FoobarLand born?",
 }
@@ -22,9 +22,9 @@ eval_result = evaluator(
   outputs=outputs,
 )
 
-print("test-1 scenario helpfulness evaluator result is",eval_result)
+print("test case 1",eval_result)
 
-# test-case -2 
+# test case 2 
 
 inputs = {
     "question": "How many clients do we have in our database?"
@@ -39,9 +39,9 @@ eval_result = evaluator(
   outputs=outputs,
 )
 
-print("test-2 scenario helpfulness evaluator result is",eval_result)
+print("test case 2",eval_result)
 
-# test-case -3 
+# test case 3
 
 inputs = {
     "question": "How many clients do we have in our database?"
@@ -56,5 +56,5 @@ eval_result = evaluator(
   outputs=outputs,
 )
 
-print("test-3 scenario helpfulness evaluator result is",eval_result)
+print("test case 3",eval_result)
 

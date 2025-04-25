@@ -10,6 +10,8 @@ evaluator = create_e2b_execution_evaluator(
 )
 
 
+# test-case -1 
+
 CODE = """
 from typing import Annotated
 
@@ -33,4 +35,28 @@ graph.invoke({})
 
 eval_result = evaluator(outputs=CODE)
 
-print(eval_result)
+print("test-case-1",eval_result)
+
+# test-case -2 
+
+CODE = """
+from typing import Annotated
+
+from typing_extensions import TypedDict
+
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
+
+
+class State(TypedDict):
+    messages: Annotated[list, add_messages]
+
+builder = StateGraph(State)
+builder.add_node("start", lambda state: state)
+builder.compile()
+
+builder.invoke({})
+"""
+
+eval_result = evaluator(outputs=CODE)
+print("test-case -2",eval_result)

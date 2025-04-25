@@ -7,6 +7,8 @@ evaluator = create_llm_as_judge(
     model="openai:o3-mini",
 )
 
+
+# test case 1
 context = {
     "documents": [
         "FoobarLand is a new country located on the dark side of the moon",
@@ -25,9 +27,9 @@ eval_result = evaluator(
     outputs=outputs,
 )
 
-print("test-case- 1 ",eval_result)
+print("test case 1 ",eval_result)
 
-# test-case -2 
+# test case 2 
 
 context = {
     "documents": [
@@ -47,4 +49,4 @@ eval_result = evaluator(
     outputs=outputs,
 )
 
-print("test-case- 2 ", eval_result)
+print("test case 2 ", eval_result)

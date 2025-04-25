@@ -7,11 +7,7 @@ evaluator = create_llm_as_judge(
     model="openai:o3-mini",
 )
 
-
-
-
-# test-case -1 
-
+# test case 1 
 inputs = {
     "question": "Where was the first president of FoobarLand born?",
 }
@@ -30,9 +26,9 @@ eval_result = evaluator(
     context=context,
 )
 
-print("test-case-1",eval_result)
+print("test case 1",eval_result)
 
-# test-case -2 
+# test case 2 
 
 inputs = {
     "question": "What are the main exports of FoobarLand?",
@@ -52,9 +48,9 @@ eval_result = evaluator(
     context=context,
 )
 
-print("test-case- 2", eval_result)
+print("test case 2", eval_result)
 
-# test-case-3 
+# test case 3
 
 inputs = {
     "question": "What are the main exports of FoobarLand?",
@@ -74,5 +70,5 @@ eval_result = evaluator(
     context=context,
 )
 
-print("test-case- 3", eval_result)
+print("test case 3", eval_result)
 

@@ -8,10 +8,7 @@ evaluator = create_code_llm_as_judge(
     code_extraction_strategy="all_code",
 )
 
-
-
-
-# test-case -1 
+# test case 1 
 
 INPUTS = """
 Rewrite the code below to be async:
@@ -58,9 +55,9 @@ eval_result = evaluator(
     outputs=OUTPUTS
 )
 
-print("test-case-1",eval_result)
+print("test case 1",eval_result)
 
-## test-case -2 
+## test case 2 
 
 INPUTS = """ Rewrite the helper below so it is **truly asynchronous** using **aiohttp** and
 `asyncio.gather`.  Preserve the behaviour and return type
@@ -97,9 +94,9 @@ async def fetch_all_async(urls: List[str]) -> List[Tuple[str, int]]:
 """
 
 eval_result = evaluator(inputs=INPUTS, outputs=OUTPUTS)
-print("test-case -2", eval_result)
+print("test case 2", eval_result)
 
-# test-case -3 
+# test case 3 
 
 INPUTS = "Generate a sample code for creating a line plot using seaborn"
 OUTPUTS = """
@@ -135,4 +132,4 @@ eval_result = evaluator(
     outputs= OUTPUTS
 )
 
-print("test-case -3", eval_result)
+print("test case 3", eval_result)

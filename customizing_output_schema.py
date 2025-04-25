@@ -27,5 +27,5 @@ evaluator = create_llm_as_judge(
     feedback_key="custom_schema_test"
 )
 
-eval_result = evaluator(message="Hi there, I’m having a small issue with my order. Could you please help me resolve it?")
+eval_result = evaluator(message="Hi there, I'm having a small issue with my order. Could you please help me resolve it?")
 print(eval_result)

@@ -14,16 +14,16 @@ evaluator = create_llm_as_judge(
 )
 
 
-# test-case - 1 
+# test case 1 
 input = "Can someone be punished for cyberbullying under Indian law?"
 output = "Yes, cyberbullying is punishable under IT Act."
 reference_output = "Yes, under Section 66A of the Information Technology Act, cyberbullying is punishable."
 eval_result = evaluator(inputs=input, outputs=output, reference_outputs=reference_output)
-print("test-case-1   ", eval_result)
+print("test case 1", eval_result)
 
-# test-cass - 2 
+# test case 2 
 input = "Can someone be punished for sending threatening messages online under Indian law?"
 output = "Yes, under Section 66A of the Information Technology Act, sending offensive or threatening messages through communication service is punishable."
 reference_output = "Yes, sending threatening or offensive messages is punishable under Section 66A of the IT Act."
 eval_result = evaluator(inputs=input,outputs=output, reference_outputs=reference_output)
-print("test-case-2  ", eval_result)
+print("test case 2", eval_result)
